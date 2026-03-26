@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Bugema University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="Bugema.jpg" alt="Bugema University Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>BUGEMA UNIVERSITY</h1>
+                        <span>Excellence in Service</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="department.html" class="nav-link">Department</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="staff.html" class="nav-link">Staff</a></li>
+                    <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+                    <li><a href="registration.html" class="nav-link active">Registration</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" style="background-image: linear-gradient(rgba(74, 144, 226, 0.8), rgba(44, 62, 80, 0.8)), url('Departem.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="container">
+                <h1>Student Registration</h1>
+                <p class="page-subtitle">Join Our Department of Computing and Informatics</p>
+            </div>
+        </section>
+
+        <section class="registration-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h2>Start Your Journey in Technology</h2>
+                        <p>Welcome to the Department of Computing and Informatics at Bugema University! We're excited that you're considering joining our innovative learning community. Our registration process is simple and straightforward.</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="Departem.jpg" alt="Student Registration">
+                    </div>
+                </div>
+                    
+                    <div class="registration-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Choose Your Program</h3>
+                            <p>Select from our range of degree, diploma, and certificate programs</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Complete Application</h3>
+                            <p>Fill out the registration form with your personal and academic details</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Submit Documents</h3>
+                            <p>Upload required documents and pay the application fee</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h3>Receive Confirmation</h3>
+                            <p>Get your admission letter and complete the registration process</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Application Form</h2>
+                        <p>Please fill out all required fields marked with *</p>
+                    </div>
+
+                    <form id="registrationForm" class="registration-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="middleName">Middle Name</label>
+                                    <input type="text" id="middleName" name="middleName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date of Birth *</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender *</label>
+                                    <select id="gender" name="gender" required>
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nationality">Nationality *</label>
+                                    <select id="nationality" name="nationality" required>
+                                        <option value="">Select Nationality</option>
+                                        <option value="ugandan">Ugandan</option>
+                                        <option value="kenyan">Kenyan</option>
+                                        <option value="tanzanian">Tanzanian</option>
+                                        <option value="rwandan">Rwandan</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="form-section">
+                            <h3>Contact Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Physical Address *</label>
+                                    <input type="text" id="address" name="address" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City/Town *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="district">District *</label>
+                                    <input type="text" id="district" name="district" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postalCode">Postal Code</label>
+                                    <input type="text" id="postalCode" name="postalCode">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Information -->
+                        <div class="form-section">
+                            <h3>Academic Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="program">Program of Interest *</label>
+                                    <select id="program" name="program" required>
+                                        <option value="">Select Program</option>
+                                        <optgroup label="Bachelor's Degrees">
+                                            <option value="bcs">Bachelor of Computer Science</option>
+                                            <option value="bit">Bachelor of Information Technology</option>
+                                        </optgroup>
+                                        <optgroup label="Diplomas">
+                                            <option value="dwd">Diploma in Web Development</option>
+                                            <option value="dca">Diploma in Computer Applications</option>
+                                        </optgroup>
+                                        <optgroup label="Certificates">
+                                            <option value="cp">Certificate in Programming</option>
+                                            <option value="cn">Certificate in Networking</option>
+                                            <option value="cdm">Certificate in Database Management</option>
+                                            <option value="cc">Certificate in Cybersecurity</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="studyMode">Study Mode *</label>
+                                    <select id="studyMode" name="studyMode" required>
+                                        <option value="">Select Study Mode</option>
+                                        <option value="fulltime">Full-time</option>
+                                        <option value="parttime">Part-time</option>
+                                        <option value="weekend">Weekend</option>
+                                        <option value="online">Online</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="intake">Intake *</label>
+                                    <select id="intake" name="intake" required>
+                                        <option value="">Select Intake</option>
+                                        <option value="august">August 2026</option>
+                                        <option value="january">January 2027</option>
+                                        <option value="may">May 2027</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="previousSchool">Previous School *</label>
+                                    <input type="text" id="previousSchool" name="previousSchool" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="graduationYear">Graduation Year *</label>
+                                    <input type="number" id="graduationYear" name="graduationYear" min="2000" max="2026" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="indexNumber">Index Number *</label>
+                                    <input type="text" id="indexNumber" name="indexNumber" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Examination Results -->
+                        <div class="form-section">
+                            <h3>Examination Results</h3>
+                            <div class="exam-results">
+                                <div class="exam-type">
+                                    <h4>UCE Results</h4>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="uceMath">Mathematics</label>
+                                            <select id="uceMath" name="uceMath">
+                                                <option value="">Select Grade</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uceEnglish">English</label>
+                                            <select id="uceEnglish" name="uceEnglish">
+                                                <option value="">Select Grade</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ucePhysics">Physics</label>
+                                            <select id="ucePhysics" name="ucePhysics">
+                                                <option value="">Select Grade</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uceChemistry">Chemistry</label>
+                                            <select id="uceChemistry" name="uceChemistry">
+                                                <option value="">Select Grade</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="exam-type">
+                                    <h4>UACE Results (if applicable)</h4>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="uaceSub1">Subject 1</label>
+                                            <input type="text" id="uaceSub1" name="uaceSub1" placeholder="Subject name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uaceGrade1">Grade 1</label>
+                                            <select id="uaceGrade1" name="uaceGrade1">
+                                                <option value="">Select Grade</option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+                                                <option value="D">D</option>
+                                                <option value="E">E</option>
+                                                <option value="O">O</option>
+                                                <option value="F">F</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uaceSub2">Subject 2</label>
+                                            <input type="text" id="uaceSub2" name="uaceSub2" placeholder="Subject name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uaceGrade2">Grade 2</label>
+                                            <select id="uaceGrade2" name="uaceGrade2">
+                                                <option value="">Select Grade</option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+                                                <option value="D">D</option>
+                                                <option value="E">E</option>
+                                                <option value="O">O</option>
+                                                <option value="F">F</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="disability">Do you have any disabilities?</label>
+                                    <select id="disability" name="disability">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full-width" id="disabilityDetails" style="display: none;">
+                                    <label for="disabilityDescription">Please describe your disability</label>
+                                    <textarea id="disabilityDescription" name="disabilityDescription" rows="3"></textarea>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="scholarship">Are you applying for a scholarship?</label>
+                                    <select id="scholarship" name="scholarship">
+                                        <option value="no">No</option>
+                                        <option value="yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="comments">Additional Comments</label>
+                                    <textarea id="comments" name="comments" rows="4" placeholder="Any additional information you'd like to share"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Document Upload -->
+                        <div class="form-section">
+                            <h3>Document Upload</h3>
+                            <div class="upload-section">
+                                <div class="upload-group">
+                                    <label for="birthCert">Birth Certificate *</label>
+                                    <input type="file" id="birthCert" name="birthCert" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <small>PDF, JPG, or PNG format (Max 5MB)</small>
+                                </div>
+                                <div class="upload-group">
+                                    <label for="uceCert">UCE Certificate/Result Slip *</label>
+                                    <input type="file" id="uceCert" name="uceCert" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <small>PDF, JPG, or PNG format (Max 5MB)</small>
+                                </div>
+                                <div class="upload-group">
+                                    <label for="uaceCert">UACE Certificate/Result Slip (if applicable)</label>
+                                    <input type="file" id="uaceCert" name="uaceCert" accept=".pdf,.jpg,.jpeg,.png">
+                                    <small>PDF, JPG, or PNG format (Max 5MB)</small>
+                                </div>
+                                <div class="upload-group">
+                                    <label for="passportPhoto">Passport Photograph *</label>
+                                    <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required>
+                                    <small>JPG or PNG format (Max 2MB)</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Declaration -->
+                        <div class="form-section">
+                            <div class="declaration">
+                                <h3>Declaration</h3>
+                                <div class="declaration-text">
+                                    <p>I hereby declare that the information provided in this application form is true and correct to the best of my knowledge. I understand that any false information may lead to the cancellation of my admission.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="declaration" name="declaration" required>
+                                        <span>I agree to the terms and conditions</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="important-info">
+            <div class="container">
+                <h2 class="section-title">Important Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Application Fee</h3>
+                        <p><strong>Ugandan Students:</strong> UGX 50,000</p>
+                        <p><strong>International Students:</strong> USD 30</p>
+                        <p>Payment can be made via bank transfer or mobile money.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Application Deadline</h3>
+                        <p><strong>August Intake:</strong> May 31, 2026</p>
+                        <p><strong>January Intake:</strong> October 31, 2026</p>
+                        <p>Late applications may be considered subject to availability.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Required Documents</h3>
+                        <ul>
+                            <li>Birth Certificate</li>
+                            <li>UCE Certificate/Results</li>
+                            <li>UACE Certificate/Results (if applicable)</li>
+                            <li>Passport Photograph</li>
+                            <li>Identification Document</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+                        <p><strong>Admissions Office:</strong></p>
+                        <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                        <p><i class="fas fa-envelope"></i> admissions@bugema.ac.ug</p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Department of Computing and Informatics</h3>
+                    <p>Bugema University</p>
+                    <p>P.O. Box 348, Bugema, Uganda</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="timetable.html">Timetable</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                    <p><i class="fas fa-envelope"></i> computing@bugema.ac.ug</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bugema University - Department of Computing and Informatics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Show/hide disability details
+        document.getElementById('disability').addEventListener('change', function() {
+            const disabilityDetails = document.getElementById('disabilityDetails');
+            if (this.value === 'yes') {
+                disabilityDetails.style.display = 'block';
+            } else {
+                disabilityDetails.style.display = 'none';
+            }
+        });
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    isValid = false;
+                    field.style.borderColor = '#E74C3C';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <div style="background: #27AE60; color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+                    <h3>Application Submitted Successfully!</h3>
+                    <p>Thank you for your application. We will review it and contact you soon.</p>
+                    <p>Your application reference number is: BU${Math.floor(Math.random() * 1000000)}</p>
+                </div>
+            `;
+            
+            this.parentNode.insertBefore(successMessage, this);
+            this.reset();
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Remove message after 10 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 10000);
+        });
+
+        // File upload validation
+        const fileInputs = document.querySelectorAll('input[type="file"]');
+        fileInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const maxSize = this.id === 'passportPhoto' ? 2 * 1024 * 1024 : 5 * 1024 * 1024; // 2MB or 5MB
+                    if (file.size > maxSize) {
+                        alert('File size exceeds the maximum limit.');
+                        this.value = '';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

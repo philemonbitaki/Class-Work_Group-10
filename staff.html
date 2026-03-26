@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Directory - Bugema University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="Bugema.jpg" alt="Bugema University Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>BUGEMA UNIVERSITY</h1>
+                        <span>Excellence in Service</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="department.html" class="nav-link">Department</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="staff.html" class="nav-link active">Staff</a></li>
+                    <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" style="background-image: linear-gradient(rgba(74, 144, 226, 0.8), rgba(44, 62, 80, 0.8)), url('Departem.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="container">
+                <h1>Staff Directory</h1>
+                <p class="page-subtitle">Meet Our Dedicated Faculty and Staff</p>
+            </div>
+        </section>
+
+        <section class="staff-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Our Academic Team</h2>
+                    <p>The Department of Computing and Informatics boasts a team of highly qualified and experienced faculty members committed to excellence in teaching, research, and student development. Our staff brings together academic expertise and industry experience to provide students with a comprehensive learning experience.</p>
+                    <div class="staff-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">25</div>
+                            <div class="stat-label">Faculty Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">PhD Holders</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">Industry Experts</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Research Groups</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="leadership">
+            <div class="container">
+                <h2 class="section-title">Department Leadership</h2>
+                <div class="leadership-grid">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="https://via.placeholder.com/200x200/4A90E2/FFFFFF?text=Dept+Head" alt="Department Head">
+                        </div>
+                        <div class="leader-info">
+                            <h3>Dr.</h3>
+                            <p class="leader-title">Head of Department</p>
+                            <p class="leader-credentials">PhD in Computer Science, MIT</p>
+                            <p class="leader-bio">Dr. Mugisha leads our department with over 20 years of experience in computer science education and research. His expertise includes artificial intelligence and software engineering.</p>
+                            <div class="leader-contact">
+                                <span><i class="fas fa-envelope"></i> </span>
+                                <span><i class="fas fa-phone"></i> +256 </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="https://via.placeholder.com/200x200/4A90E2/FFFFFF?text=Deputy" alt="Deputy Head">
+                        </div>
+                        <div class="leader-info">
+                            <h3>Dr. </h3>
+                            <p class="leader-title">Deputy Head of Department</p>
+                            <p class="leader-credentials">PhD in Information Technology, Stanford</p>
+                            <p class="leader-bio">Dr. Nankya oversees academic programs and student affairs. She specializes in cybersecurity and network security with 15 years of teaching experience.</p>
+                            <div class="leader-contact">
+                                <span><i class="fas fa-envelope"></i> </span>
+                                <span><i class="fas fa-phone"></i> +256 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faculty-section">
+            <div class="container">
+                <h2 class="section-title">Faculty Members</h2>
+                
+                <div class="faculty-filters">
+                    <button class="filter-btn active" data-filter="all">All Faculty</button>
+                    <button class="filter-btn" data-filter="professors">Professors</button>
+                    <button class="filter-btn" data-filter="lecturers">Lecturers</button>
+                    <button class="filter-btn" data-filter="assistants">Teaching Assistants</button>
+                </div>
+
+                <div class="faculty-grid">
+                    <div class="faculty-card" data-category="professors">
+                        <div class="faculty-image">
+                            <img src="kitumba.jpg" alt="Professor">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Prof. kitumba</h3>
+                            <p class="faculty-title">Professor of Computer Science</p>
+                            <p class="faculty-credentials">PhD, University of Cambridge</p>
+                            <div class="faculty-expertise">
+                                <span>Algorithms</span>
+                                <span>Machine Learning</span>
+                                <span>Research</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href="mailto:michael.katumba@bugema.ac.ug"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-category="professors">
+                        <div class="faculty-image">
+                            <img src="walu.jpg" alt="Professor">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Prof. Walusimbi</h3>
+                            <p class="faculty-title">Professor of Software Engineering</p>
+                            <p class="faculty-credentials">PhD, Harvard University</p>
+                            <div class="faculty-expertise">
+                                <span>Software Architecture</span>
+                                <span>DevOps</span>
+                                <span>Cloud Computing</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href="mailto:grace.akello@bugema.ac.ug"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-category="lecturers">
+                        <div class="faculty-image">
+                            <img src="claude.jpg" alt="Lecturer">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Mr. </h3>
+                            <p class="faculty-title">Senior Lecturer</p>
+                            <p class="faculty-credentials">MSc, Makerere University</p>
+                            <div class="faculty-expertise">
+                                <span>Database Systems</span>
+                                <span>Web Development</span>
+                                <span>Mobile Apps</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href="mailto:david.ssebadduka@bugema.ac.ug"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-category="lecturers">
+                        <div class="faculty-image">
+                            <img src="https://via.placeholder.com/150x150/4A90E2/FFFFFF?text=Lect2" alt="Lecturer">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Ms.</h3>
+                            <p class="faculty-title">Lecturer</p>
+                            <p class="faculty-credentials">MSc, Carnegie Mellon</p>
+                            <div class="faculty-expertise">
+                                <span>UI/UX Design</span>
+                                <span>Graphics</span>
+                                <span>Animation</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href=" "><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-category="lecturers">
+                        <div class="faculty-image">
+                            <img src="bal.jpg" alt="Lecturer">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Mr. Peter Okello</h3>
+                            <p class="faculty-title">Lecturer</p>
+                            <p class="faculty-credentials">MSc, University of Nairobi</p>
+                            <div class="faculty-expertise">
+                                <span>Network Security</span>
+                                <span>Cybersecurity</span>
+                                <span>Ethical Hacking</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href="mailto:peter.okello@bugema.ac.ug"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-category="assistants">
+                        <div class="faculty-image">
+                            <img src="https://via.placeholder.com/150x150/4A90E2/FFFFFF?text=TA1" alt="Teaching Assistant">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Ms. </h3>
+                            <p class="faculty-title">Teaching Assistant</p>
+                            <p class="faculty-credentials">BSc, Bugema University</p>
+                            <div class="faculty-expertise">
+                                <span>Programming</span>
+                                <span>Data Structures</span>
+                                <span>Algorithms</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href=" "><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faculty-card" data-category="assistants">
+                        <div class="faculty-image">
+                            <img src="pierre.jpg" alt="Teaching Assistant">
+                        </div>
+                        <div class="faculty-info">
+                            <h3>Mr. </h3>
+                            <p class="faculty-title">Teaching Assistant</p>
+                            <p class="faculty-credentials">BSc, Bugema University</p>
+                            <div class="faculty-expertise">
+                                <span>Web Development</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+                            <div class="faculty-contact">
+                                <a href=""><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="administrative-staff">
+            <div class="container">
+                <h2 class="section-title">Administrative Staff</h2>
+                <div class="admin-grid">
+                    <div class="admin-card">
+                        <div class="admin-image">
+                            <img src="https://via.placeholder.com/100x100/4A90E2/FFFFFF?text=Admin" alt="Administrative Staff">
+                        </div>
+                        <div class="admin-info">
+                            <h3>Ms. </h3>
+                            <p class="admin-title">Department Secretary</p>
+                            <p><i class="fas fa-envelope"></i> </p>
+                            <p><i class="fas fa-phone"></i> +256 </p>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <div class="admin-image">
+                            <img src="https://via.placeholder.com/100x100/4A90E2/FFFFFF?text=Lab" alt="Lab Technician">
+                        </div>
+                        <div class="admin-info">
+                            <h3>Mr.</h3>
+                            <p class="admin-title">Lab Technician</p>
+                            <p><i class="fas fa-envelope"></i> </p>
+                            <p><i class="fas fa-phone"></i> +256</p>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <div class="admin-image">
+                            <img src="https://via.placeholder.com/100x100/4A90E2/FFFFFF?text=IT" alt="IT Support">
+                        </div>
+                        <div class="admin-info">
+                            <h3>Mr. </h3>
+                            <p class="admin-title">IT Support Officer</p>
+                            <p><i class="fas fa-envelope"></i> </p>
+                            <p><i class="fas fa-phone"></i> +256 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-areas">
+            <div class="container">
+                <h2 class="section-title">Research Groups & Areas</h2>
+                <div class="research-grid">
+                    <div class="research-group">
+                        <h3>Artificial Intelligence Lab</h3>
+                        <p>Lead: Prof. Michael Katumba</p>
+                        <p>Research in machine learning, neural networks, and natural language processing.</p>
+                        <ul>
+                            <li>Deep Learning Applications</li>
+                            <li>Computer Vision</li>
+                            <li>NLP Systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-group">
+                        <h3>Cybersecurity Center</h3>
+                        <p>Lead: Dr. Sarah Nankya</p>
+                        <p>Research in network security, cryptography, and digital forensics.</p>
+                        <ul>
+                            <li>Network Security Protocols</li>
+                            <li>Ethical Hacking</li>
+                            <li>Digital Forensics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-group">
+                        <h3>Software Engineering Group</h3>
+                        <p>Lead: Prof. Grace Akello</p>
+                        <p>Research in software architecture, agile methodologies, and DevOps.</p>
+                        <ul>
+                            <li>Software Architecture</li>
+                            <li>Agile Methodologies</li>
+                            <li>Cloud-Native Development</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-group">
+                        <h3>Data Science Initiative</h3>
+                        <p>Lead: Mr. David Ssebadduka</p>
+                        <p>Research in big data analytics, data mining, and predictive modeling.</p>
+                        <ul>
+                            <li>Big Data Analytics</li>
+                            <li>Predictive Modeling</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Our Staff</h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>General Inquiries</h3>
+                        <p><i class="fas fa-envelope"></i> computing@bugema.ac.ug</p>
+                        <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                        <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Student Support</h3>
+                        <p><i class="fas fa-envelope"></i> studentsupport@bugema.ac.ug</p>
+                        <p><i class="fas fa-phone"></i> +256 414 123461</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Department Office, Block A</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Research Collaboration</h3>
+                        <p><i class="fas fa-envelope"></i> research@bugema.ac.ug</p>
+                        <p><i class="fas fa-phone"></i> +256 414 123462</p>
+                        <p><i class="fas fa-globe"></i> research.bugema.ac.ug/computing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join Our Academic Team</h2>
+                    <p>We are always looking for passionate educators and researchers to join our department. Explore career opportunities with us.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">View Openings</a>
+                        <a href="contact.html" class="btn btn-secondary">Contact HR</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Department of Computing and Informatics</h3>
+                    <p>Bugema University</p>
+                    <p>P.O. Box 348, Bugema, Uganda</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="timetable.html">Timetable</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                    <p><i class="fas fa-envelope"></i> computing@bugema.ac.ug</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bugema University - Department of Computing and Informatics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Faculty filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const facultyCards = document.querySelectorAll('.faculty-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                facultyCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

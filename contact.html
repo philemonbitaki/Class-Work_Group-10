@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bugema University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="Bugema.jpg" alt="Bugema University Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>BUGEMA UNIVERSITY</h1>
+                        <span>Excellence in Service</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="department.html" class="nav-link">Department</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="staff.html" class="nav-link">Staff</a></li>
+                    <li><a href="timetable.html" class="nav-link">Timetable</a></li>
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" style="background-image: linear-gradient(rgba(74, 144, 226, 0.8), rgba(44, 62, 80, 0.8)), url('Departem.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p class="page-subtitle">Get in Touch with the Department of Computing and Informatics</p>
+            </div>
+        </section>
+
+        <section class="contact-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h2>We're Here to Help</h2>
+                        <p>Whether you're a prospective student, current student, parent, or industry partner, we're ready to assist you. Our dedicated team is available to answer your questions and provide the support you need.</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="Departem.jpg" alt="Contact Department">
+                    </div>
+                </div>
+                    
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <div class="option-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>Speak directly with our team</p>
+                            <a href="tel:+256 76615673" class="contact-link">+256 414 123456</a>
+                        </div>
+                        
+                        <div class="contact-option">
+                            <div class="option-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>Send us a message anytime</p>
+                            <a href="mailto:computing@bugema.ac.ug" class="contact-link">computing@bugema.ac.ug</a>
+                        </div>
+                        
+                        <div class="contact-option">
+                            <div class="option-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Visit Us</h3>
+                            <p>Stop by our department office</p>
+                            <a href="#location" class="contact-link">View Location</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-main">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <div class="form-container">
+                            <h2>Send Us a Message</h2>
+                            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                            
+                            <form id="contactForm" class="contact-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="admissions">Admissions Inquiry</option>
+                                        <option value="programs">Program Information</option>
+                                        <option value="registration">Registration Help</option>
+                                        <option value="academic">Academic Support</option>
+                                        <option value="technical">Technical Issues</option>
+                                        <option value="partnership">Partnership Opportunities</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <span>I would like to receive updates and news from the department</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-section">
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h3>Department Office</h3>
+                                <div class="info-details">
+                                    <p><i class="fas fa-map-marker-alt"></i> Block A, Room 201</p>
+                                    <p><i class="fas fa-building"></i> Bugema University Main Campus</p>
+                                    <p><i class="fas fa-location-arrow"></i> P.O. Box 348, Bugema, Uganda</p>
+                                </div>
+                                <div class="office-hours">
+                                    <h4>Office Hours</h4>
+                                    <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                    <p><i class="fas fa-clock"></i> Saturday: 9:00 AM - 1:00 PM</p>
+                                    <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <h3>Key Contacts</h3>
+                                <div class="contact-list">
+                                    <div class="contact-item">
+                                        <h4>Department Head</h4>
+                                        <p>Dr. John Mugisha</p>
+                                        <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                                        <p><i class="fas fa-envelope"></i> john.mugisha@bugema.ac.ug</p>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <h4>Academic Registrar</h4>
+                                        <p>Ms. Peace Nakabuye</p>
+                                        <p><i class="fas fa-phone"></i> +256 414 123463</p>
+                                        <p><i class="fas fa-envelope"></i> registrar@bugema.ac.ug</p>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <h4>Student Support</h4>
+                                        <p>Mr. David Ssebadduka</p>
+                                        <p><i class="fas fa-phone"></i> +256 414 123461</p>
+                                        <p><i class="fas fa-envelope"></i> studentsupport@bugema.ac.ug</p>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <h4>Admissions Office</h4>
+                                        <p>Ms. Rebecca Nalwoga</p>
+                                        <p><i class="fas fa-phone"></i> +256 414 123462</p>
+                                        <p><i class="fas fa-envelope"></i> admissions@bugema.ac.ug</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <h3>Emergency Contacts</h3>
+                                <div class="emergency-contacts">
+                                    <div class="emergency-item">
+                                        <h4>Campus Security</h4>
+                                        <p><i class="fas fa-phone-alt"></i> +256 414 123999 (24/7)</p>
+                                    </div>
+                                    
+                                    <div class="emergency-item">
+                                        <h4>Medical Emergency</h4>
+                                        <p><i class="fas fa-phone-alt"></i> +256 414 123988</p>
+                                    </div>
+                                    
+                                    <div class="emergency-item">
+                                        <h4>IT Support (Technical Issues)</h4>
+                                        <p><i class="fas fa-phone-alt"></i> +256 414 123460</p>
+                                        <p><i class="fas fa-envelope"></i> itsupport@bugema.ac.ug</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section" id="location">
+            <div class="container">
+                <h2 class="section-title">Find Us</h2>
+                <div class="location-content">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <img src="https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=Interactive+Map+Showing+Bugema+University+Location" alt="Campus Map">
+                            <div class="map-overlay">
+                                <p>Interactive map would be displayed here showing the exact location of Bugema University and the Department of Computing and Informatics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="directions">
+                        <h3>Getting to Bugema University</h3>
+                        
+                        <div class="direction-method">
+                            <h4><i class="fas fa-bus"></i> By Public Transport</h4>
+                            <ul>
+                                <li>From Kampala: Take taxi to Bugema town (approximately 2 hours)</li>
+                                <li>From Entebbe: Take taxi to Kampala, then connect to Bugema</li>
+                                <li>From Jinja: Direct taxis available to Bugema</li>
+                                <li>Campus is 5 minutes walk from Bugema town center</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="direction-method">
+                            <h4><i class="fas fa-car"></i> By Private Vehicle</h4>
+                            <ul>
+                                <li>From Kampala: Take Jinja Road, turn at Lugazi towards Bugema</li>
+                                <li>Distance: Approximately 60km from Kampala</li>
+                                <li>Travel time: 1.5 - 2 hours depending on traffic</li>
+                                <li>Ample parking available on campus</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="direction-method">
+                            <h4><i class="fas fa-plane"></i> From Entebbe Airport</h4>
+                            <ul>
+                                <li>Take airport taxi to Kampala (approximately 1 hour)</li>
+                                <li>Connect to Bugema taxi from Kampala taxi park</li>
+                                <li>Total travel time: 3 - 4 hours</li>
+                                <li>Airport pickup service available for international students</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I apply to the Department of Computing and Informatics?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can apply by visiting our registration page and filling out the application form. Alternatively, you can visit our admissions office in person or download the application form from our website.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What are the admission requirements for the programs?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Requirements vary by program. For bachelor's degrees, you need UACE with 2 principal passes and UCE with at least 5 credits. For diplomas, UCE with at least 4-5 credits is required. Please check our programs page for specific requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>When is the application deadline?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The application deadline for the August intake is May 31st, and for the January intake is October 31st. Late applications may be considered subject to availability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer scholarships or financial aid?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer various scholarships including academic excellence scholarships, need-based financial aid, sports scholarships, and women in technology scholarships. Please contact our admissions office for more information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is the student-to-faculty ratio?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We maintain a student-to-faculty ratio of approximately 20:1, ensuring personalized attention and quality education for our students.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are there internship opportunities for students?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have partnerships with over 15 tech companies that provide internship opportunities for our students. We also have a dedicated career development office that helps students secure internships and job placements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <div class="container">
+                <h2 class="section-title">Connect With Us</h2>
+                <div class="social-content">
+                    <div class="social-text">
+                        <p>Stay updated with the latest news, events, and opportunities from the Department of Computing and Informatics. Follow us on social media!</p>
+                    </div>
+                    <div class="social-links-large">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Department of Computing and Informatics</h3>
+                    <p>Bugema University</p>
+                    <p>P.O. Box 348, Bugema, Uganda</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="timetable.html">Timetable</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                    <p><i class="fas fa-envelope"></i> computing@bugema.ac.ug</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bugema University - Department of Computing and Informatics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    isValid = false;
+                    field.style.borderColor = '#E74C3C';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <div style="background: #27AE60; color: white; padding: 1rem; border-radius: 6px; margin-bottom: 1rem; text-align: center;">
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We will get back to you within 24-48 hours.</p>
+                </div>
+            `;
+            
+            this.parentNode.insertBefore(successMessage, this);
+            this.reset();
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        });
+
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = question.querySelector('i');
+            
+            question.addEventListener('click', () => {
+                // Close other FAQs
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                        otherItem.querySelector('.faq-answer').style.padding = '0';
+                        otherItem.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current FAQ
+                if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                    answer.style.maxHeight = '0';
+                    answer.style.padding = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.padding = '1rem 0';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Initialize FAQ answers as hidden
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.maxHeight = '0';
+            answer.style.overflow = 'hidden';
+            answer.style.transition = 'max-height 0.3s ease, padding 0.3s ease';
+        });
+    </script>
+</body>
+</html>

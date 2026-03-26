@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Timetable - Bugema University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="Bugema.jpg" alt="Bugema University Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>BUGEMA UNIVERSITY</h1>
+                        <span>Excellence in Service</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="department.html" class="nav-link">Department</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="staff.html" class="nav-link">Staff</a></li>
+                    <li><a href="timetable.html" class="nav-link active">Timetable</a></li>
+                    <li><a href="registration.html" class="nav-link">Registration</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" style="background-image: linear-gradient(rgba(74, 144, 226, 0.8), rgba(44, 62, 80, 0.8)), url('Departem.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="container">
+                <h1>Department Timetable</h1>
+                <p class="page-subtitle">Weekly Schedule for Computing and Informatics Programs</p>
+            </div>
+        </section>
+
+        <section class="timetable-controls">
+            <div class="container">
+                <div class="controls-content">
+                    <div class="semester-selector">
+                        <label for="semester">Select Semester:</label>
+                        <select id="semester">
+                            <option value="sem1">Semester 1 (Aug-Dec 2026)</option>
+                            <option value="sem2">Semester 2 (Jan-May 2027)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="program-filter">
+                        <label for="programFilter">Filter by Program:</label>
+                        <select id="programFilter">
+                            <option value="all">All Programs</option>
+                            <option value="bcs">Bachelor of Computer Science</option>
+                            <option value="bit">Bachelor of Information Technology</option>
+                            <option value="dwd">Diploma in Web Development</option>
+                            <option value="dca">Diploma in Computer Applications</option>
+                        </select>
+                    </div>
+                    
+                    <div class="view-options">
+                        <button class="btn btn-primary" id="printBtn"><i class="fas fa-print"></i> Print</button>
+                        <button class="btn btn-secondary" id="downloadBtn"><i class="fas fa-download"></i> Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timetable-section">
+            <div class="container">
+                <div class="timetable-wrapper">
+                    <div class="timetable-legend">
+                        <h3>Legend:</h3>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span class="legend-color lecture"></span>
+                                <span>Lecture</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color lab"></span>
+                                <span>Laboratory</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color tutorial"></span>
+                                <span>Tutorial</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color break"></span>
+                                <span>Break</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timetable-table-wrapper">
+                        <table class="timetable-table" id="timetable">
+                            <thead>
+                                <tr>
+                                    <th class="time-column">Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="time-slot">8:00 - 9:00</td>
+                                    <td class="lecture" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Programming Fundamentals</div>
+                                            <div class="course-code">CSC 101</div>
+                                            <div class="instructor">Prof. Katumba</div>
+                                            <div class="room">Lab 1</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Introduction to IT</div>
+                                            <div class="course-code">IT 101</div>
+                                            <div class="instructor">Dr. Nankya</div>
+                                            <div class="room">Room 201</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Discrete Mathematics</div>
+                                            <div class="course-code">MTH 101</div>
+                                            <div class="instructor">Prof. Katumba</div>
+                                            <div class="room">Room 203</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="dwd">
+                                        <div class="course-info">
+                                            <div class="course-name">HTML/CSS Lab</div>
+                                            <div class="course-code">WEB 101</div>
+                                            <div class="instructor">Mr. Ssebadduka</div>
+                                            <div class="room">Lab 2</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Computer Fundamentals</div>
+                                            <div class="course-code">CS 101</div>
+                                            <div class="instructor">Ms. Nalwoga</div>
+                                            <div class="room">Room 205</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">9:00 - 10:00</td>
+                                    <td class="lecture" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Programming Fundamentals</div>
+                                            <div class="course-code">CSC 101</div>
+                                            <div class="instructor">Prof. Katumba</div>
+                                            <div class="room">Lab 1</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Introduction to IT</div>
+                                            <div class="course-code">IT 101</div>
+                                            <div class="instructor">Dr. Nankya</div>
+                                            <div class="room">Room 201</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Discrete Mathematics</div>
+                                            <div class="course-code">MTH 101</div>
+                                            <div class="instructor">Prof. Katumba</div>
+                                            <div class="room">Room 203</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="dwd">
+                                        <div class="course-info">
+                                            <div class="course-name">HTML/CSS Lab</div>
+                                            <div class="course-code">WEB 101</div>
+                                            <div class="instructor">Mr. Ssebadduka</div>
+                                            <div class="room">Lab 2</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Computer Fundamentals</div>
+                                            <div class="course-code">CS 101</div>
+                                            <div class="instructor">Ms. Nalwoga</div>
+                                            <div class="room">Room 205</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">10:00 - 11:00</td>
+                                    <td class="break" colspan="5">
+                                        <div class="break-info">
+                                            <i class="fas fa-coffee"></i>
+                                            <span>Tea Break</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">11:00 - 12:00</td>
+                                    <td class="lab" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Programming Lab</div>
+                                            <div class="course-code">CSC 101L</div>
+                                            <div class="instructor">Ms. Nakato</div>
+                                            <div class="room">Lab 1</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="dca">
+                                        <div class="course-info">
+                                            <div class="course-name">Office Applications</div>
+                                            <div class="course-code">APP 101</div>
+                                            <div class="instructor">Mr. Ssewanyana</div>
+                                            <div class="room">Lab 3</div>
+                                        </div>
+                                    </td>
+                                    <td class="tutorial" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Math Tutorial</div>
+                                            <div class="course-code">MTH 101T</div>
+                                            <div class="instructor">Ms. Nakato</div>
+                                            <div class="room">Room 101</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Business Communication</div>
+                                            <div class="course-code">COM 101</div>
+                                            <div class="instructor">Ms. Nalwoga</div>
+                                            <div class="room">Room 301</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="dwd">
+                                        <div class="course-info">
+                                            <div class="course-name">JavaScript Lab</div>
+                                            <div class="course-code">WEB 102</div>
+                                            <div class="instructor">Mr. Ssebadduka</div>
+                                            <div class="room">Lab 2</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">12:00 - 1:00</td>
+                                    <td class="lab" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Programming Lab</div>
+                                            <div class="course-code">CSC 101L</div>
+                                            <div class="instructor">Ms. Nakato</div>
+                                            <div class="room">Lab 1</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="dca">
+                                        <div class="course-info">
+                                            <div class="course-name">Office Applications</div>
+                                            <div class="course-code">APP 101</div>
+                                            <div class="instructor">Mr. Ssewanyana</div>
+                                            <div class="room">Lab 3</div>
+                                        </div>
+                                    </td>
+                                    <td class="tutorial" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Math Tutorial</div>
+                                            <div class="course-code">MTH 101T</div>
+                                            <div class="instructor">Ms. Nakato</div>
+                                            <div class="room">Room 101</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Business Communication</div>
+                                            <div class="course-code">COM 101</div>
+                                            <div class="instructor">Ms. Nalwoga</div>
+                                            <div class="room">Room 301</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="dwd">
+                                        <div class="course-info">
+                                            <div class="course-name">JavaScript Lab</div>
+                                            <div class="course-code">WEB 102</div>
+                                            <div class="instructor">Mr. Ssebadduka</div>
+                                            <div class="room">Lab 2</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">1:00 - 2:00</td>
+                                    <td class="break" colspan="5">
+                                        <div class="break-info">
+                                            <i class="fas fa-utensils"></i>
+                                            <span>Lunch Break</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">2:00 - 3:00</td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Database Systems</div>
+                                            <div class="course-code">DB 101</div>
+                                            <div class="instructor">Mr. Ssebadduka</div>
+                                            <div class="room">Room 202</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Digital Logic Lab</div>
+                                            <div class="course-code">CS 102L</div>
+                                            <div class="instructor">Mr. Kintu</div>
+                                            <div class="room">Lab 4</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="dwd">
+                                        <div class="course-info">
+                                            <div class="course-name">Web Design Principles</div>
+                                            <div class="course-code">WEB 103</div>
+                                            <div class="instructor">Ms. Nalwoga</div>
+                                            <div class="room">Room 204</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Digital Logic Design</div>
+                                            <div class="course-code">CS 102</div>
+                                            <div class="instructor">Prof. Akello</div>
+                                            <div class="room">Room 206</div>
+                                        </div>
+                                    </td>
+                                    <td class="tutorial" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Database Tutorial</div>
+                                            <div class="course-code">DB 101T</div>
+                                            <div class="instructor">Mr. Ssewanyana</div>
+                                            <div class="room">Room 102</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">3:00 - 4:00</td>
+                                    <td class="lecture" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Database Systems</div>
+                                            <div class="course-code">DB 101</div>
+                                            <div class="instructor">Mr. Ssebadduka</div>
+                                            <div class="room">Room 202</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Digital Logic Lab</div>
+                                            <div class="course-code">CS 102L</div>
+                                            <div class="instructor">Mr. Kintu</div>
+                                            <div class="room">Lab 4</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="dwd">
+                                        <div class="course-info">
+                                            <div class="course-name">Web Design Principles</div>
+                                            <div class="course-code">WEB 103</div>
+                                            <div class="instructor">Ms. Nalwoga</div>
+                                            <div class="room">Room 204</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Digital Logic Design</div>
+                                            <div class="course-code">CS 102</div>
+                                            <div class="instructor">Prof. Akello</div>
+                                            <div class="room">Room 206</div>
+                                        </div>
+                                    </td>
+                                    <td class="tutorial" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Database Tutorial</div>
+                                            <div class="course-code">DB 101T</div>
+                                            <div class="instructor">Mr. Ssewanyana</div>
+                                            <div class="room">Room 102</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">4:00 - 5:00</td>
+                                    <td class="lecture" data-program="dca">
+                                        <div class="course-info">
+                                            <div class="course-name">Computer Basics</div>
+                                            <div class="course-code">CS 103</div>
+                                            <div class="instructor">Mr. Okello</div>
+                                            <div class="room">Lab 3</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="all">
+                                        <div class="course-info">
+                                            <div class="course-name">Sports & Recreation</div>
+                                            <div class="course-code">SPR 101</div>
+                                            <div class="instructor">Sports Dept.</div>
+                                            <div class="room">Sports Field</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Network Lab</div>
+                                            <div class="course-code">NET 101L</div>
+                                            <div class="instructor">Mr. Okello</div>
+                                            <div class="room">Lab 5</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="dca">
+                                        <div class="course-info">
+                                            <div class="course-name">Internet Basics</div>
+                                            <div class="course-code">NET 102</div>
+                                            <div class="instructor">Mr. Ssewanyana</div>
+                                            <div class="room">Room 103</div>
+                                        </div>
+                                    </td>
+                                    <td class="tutorial" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Programming Tutorial</div>
+                                            <div class="course-code">CSC 101T</div>
+                                            <div class="instructor">Ms. Nakato</div>
+                                            <div class="room">Room 104</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="time-slot">5:00 - 6:00</td>
+                                    <td class="lecture" data-program="dca">
+                                        <div class="course-info">
+                                            <div class="course-name">Computer Basics</div>
+                                            <div class="course-code">CS 103</div>
+                                            <div class="instructor">Mr. Okello</div>
+                                            <div class="room">Lab 3</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="all">
+                                        <div class="course-info">
+                                            <div class="course-name">Sports & Recreation</div>
+                                            <div class="course-code">SPR 101</div>
+                                            <div class="instructor">Sports Dept.</div>
+                                            <div class="room">Sports Field</div>
+                                        </div>
+                                    </td>
+                                    <td class="lab" data-program="bit">
+                                        <div class="course-info">
+                                            <div class="course-name">Network Lab</div>
+                                            <div class="course-code">NET 101L</div>
+                                            <div class="instructor">Mr. Okello</div>
+                                            <div class="room">Lab 5</div>
+                                        </div>
+                                    </td>
+                                    <td class="lecture" data-program="dca">
+                                        <div class="course-info">
+                                            <div class="course-name">Internet Basics</div>
+                                            <div class="course-code">NET 102</div>
+                                            <div class="instructor">Mr. Ssewanyana</div>
+                                            <div class="room">Room 103</div>
+                                        </div>
+                                    </td>
+                                    <td class="tutorial" data-program="bcs">
+                                        <div class="course-info">
+                                            <div class="course-name">Programming Tutorial</div>
+                                            <div class="course-code">CSC 101T</div>
+                                            <div class="instructor">Ms. Nakato</div>
+                                            <div class="room">Room 104</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exam-schedule">
+            <div class="container">
+                <h2 class="section-title">Examination Schedule</h2>
+                <div class="exam-timeline">
+                    <div class="exam-period">
+                        <h3>Mid-Semester Examinations</h3>
+                        <p><strong>Period:</strong> October 18-22, 2026</p>
+                        <p><strong>Duration:</strong> 1 week</p>
+                        <p><strong>Type:</strong> Continuous Assessment</p>
+                        <p><strong>Weight:</strong> 30% of final grade</p>
+                    </div>
+                    <div class="exam-period">
+                        <h3>End of Semester Examinations</h3>
+                        <p><strong>Period:</strong> December 6-17, 2026</p>
+                        <p><strong>Duration:</strong> 2 weeks</p>
+                        <p><strong>Type:</strong> Final Examination</p>
+                        <p><strong>Weight:</strong> 70% of final grade</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="important-dates">
+            <div class="container">
+                <h2 class="section-title">Important Academic Dates</h2>
+                <div class="dates-grid">
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Registration Period</h3>
+                        <p>August 1-15, 2026</p>
+                        <p>Student registration and course selection</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Classes Begin</h3>
+                        <p>August 22, 2026</p>
+                        <p>First day of instruction</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>CAT 1</h3>
+                        <p>September 27-29, 2026</p>
+                        <p>Continuous Assessment Test 1</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>CAT 2</h3>
+                        <p>October 18-22, 2026</p>
+                        <p>Continuous Assessment Test 2</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Final Exams</h3>
+                        <p>December 6-17, 2026</p>
+                        <p>End of semester examinations</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Graduation</h3>
+                        <p>February 28, 2027</p>
+                        <p>27th Graduation Ceremony</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <h2 class="section-title">Timetable Inquiries</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Academic Registrar</h3>
+                        <p><i class="fas fa-envelope"></i> registrar@bugema.ac.ug</p>
+                        <p><i class="fas fa-phone"></i> +256 414 123463</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Administration Block, Room 101</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Department Office</h3>
+                        <p><i class="fas fa-envelope"></i> computing@bugema.ac.ug</p>
+                        <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Block A, Room 201</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Student Support</h3>
+                        <p><i class="fas fa-envelope"></i> studentsupport@bugema.ac.ug</p>
+                        <p><i class="fas fa-phone"></i> +256 414 123461</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Department of Computing and Informatics</h3>
+                    <p>Bugema University</p>
+                    <p>P.O. Box 348, Bugema, Uganda</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="timetable.html">Timetable</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +256 414 123456</p>
+                    <p><i class="fas fa-envelope"></i> computing@bugema.ac.ug</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bugema University - Department of Computing and Informatics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Program filter functionality
+        document.getElementById('programFilter').addEventListener('change', function() {
+            const filter = this.value;
+            const cells = document.querySelectorAll('.timetable-table td[data-program]');
+            
+            cells.forEach(cell => {
+                if (filter === 'all' || cell.getAttribute('data-program') === filter) {
+                    cell.style.display = '';
+                    cell.style.opacity = '1';
+                } else {
+                    cell.style.opacity = '0.3';
+                }
+            });
+        });
+
+        // Print functionality
+        document.getElementById('printBtn').addEventListener('click', function() {
+            window.print();
+        });
+
+        // Download functionality (mock)
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            alert('Download feature would generate a PDF version of the timetable.');
+        });
+
+        // Semester change
+        document.getElementById('semester').addEventListener('change', function() {
+            alert('Timetable would be updated for ' + this.options[this.selectedIndex].text);
+        });
+
+        // Add hover effect for course cells
+        const courseCells = document.querySelectorAll('.timetable-table td:not(.time-slot):not(.break)');
+        courseCells.forEach(cell => {
+            cell.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.zIndex = '10';
+                this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+            });
+            
+            cell.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.zIndex = '';
+                this.style.boxShadow = '';
+            });
+        });
+    </script>
+</body>
+</html>
